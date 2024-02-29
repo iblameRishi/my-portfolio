@@ -61,7 +61,7 @@ const LandingSection = ({ resumeUrl = "" }) => {
               data-aos-duration="1000"
               data-aos-delay="50"
             >
-              Hii 👋, I'm Rishikeshav Ravichandran
+              {"Hii 👋, I'm Rishikeshav Ravichandran"}
             </h1>
 
             <h1
