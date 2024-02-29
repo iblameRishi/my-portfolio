@@ -2,7 +2,7 @@ const RandomQuotesSection = async () => {
   let randomQuotes;
 
   try {
-    randomQuotes = await (await fetch("https://api.quotable.io/random")).json();
+    randomQuotes = await (await fetch("https://api.kanye.rest", {cache: "no-store"})).json();
   } catch (error) {}
 
   if (!randomQuotes) return <></>;
@@ -16,11 +16,11 @@ const RandomQuotesSection = async () => {
           className="text-center ring-1 ring-primary-800 border bg-gradient-to-tr from-primary-950 to-primary-700 border-primary-800 shadow-big h-full lg:col-span-full lg:p-20 p-8 rounded-3xl relative "
         >
           <h4 className="lg:text-3xl text-white font-display">
-            {randomQuotes?.content}
+            {randomQuotes?.quote}
           </h4>
 
           <p className="text-primary-300 text-xl mt-6 italic uppercase">
-            {randomQuotes?.author}
+            Kanye West
           </p>
         </div>
       </div>
