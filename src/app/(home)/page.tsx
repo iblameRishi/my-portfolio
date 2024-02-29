@@ -9,9 +9,9 @@ import RandomQuotesSection from "./_components/random-quotes-section";
 import SkillsSection from "./_components/skills-section";
 
 export default async function Home() {
-  const projectQuery = `*[_type == "projects"] | order(finishedAt desc)[]`;
+  const projectQuery = `*[_type == "projects"] | order(finishedAt desc)`;
 
-  const educationQuery = `*[_type == "education"] | order(start desc)[]{
+  const educationQuery = `*[_type == "education"] | order(start desc){
     name,
     image,
     description,
@@ -19,7 +19,7 @@ export default async function Home() {
     end
   }`;
 
-  const skillsQuery = `*[_type == "skills"][]{
+  const skillsQuery = `*[_type == "skills"]{
     name,
     image
   }`;
