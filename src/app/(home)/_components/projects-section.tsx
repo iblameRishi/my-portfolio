@@ -32,7 +32,7 @@ const ProjectsSection = ({ projects }: Props) => {
                       width={1000}
                       height={1000}
                       className="w-full h-full object-cover drop-shadow-3xl"
-                      src={urlForImage(images[0])}
+                      src={images && images.length > 0 ? urlForImage(images[0]) : ''}
                       alt={title}
                     />
 
